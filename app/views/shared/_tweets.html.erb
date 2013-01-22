@@ -1,0 +1,15 @@
+<ul class="tweets">
+  <% for tweet in tweets %>
+  <li>
+    <div class="tweet">
+      <div class="header">
+        <%= link_to_user tweet.user %>
+        <span class="when"><%= time_ago_in_words(tweet.created_at) %></span>
+      </div>
+      <p class="text">
+        <%=raw textilize(tweet.text) %>
+      </p>
+    </div>
+  </li>
+  <% end %>
+</ul>

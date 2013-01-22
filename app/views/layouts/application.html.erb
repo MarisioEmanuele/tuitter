@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tuitter</title>
+    <link rel="stylesheet" href="/css/master.css" type="text/css" media="screen" />
+  </head>
+  <body>
+    <div id="page">
+      <h1><a href="/">Tuitter</a></h1>
+
+      <% if flash[:notice] %>
+      <p class="flash"><%= flash[:notice] %></p>
+      <% end  %>
+
+      <%= yield %>
+    </div>
+  </body>
+</html>

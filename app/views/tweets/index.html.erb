@@ -1,0 +1,20 @@
+<p>
+  <% if current_user %>
+    Benvenuto <%= link_to_user current_user %> (<%= link_to "logout", "/sessions/destroy" %>)
+  <% else %>
+    Please <%= link_to "log in", "/sessions/new" %> or 
+    <%= link_to "register", "/users/new" %>
+  <% end %>
+</p>
+<% if current_user %>
+  <form id="new_tweet" action="/tweets/create" method="post">
+    <p>
+      <textarea name="tweet[text]"></textarea>
+    </p>
+    <p>
+      <input type="submit" value="Update your status" />
+    </p>
+  </form>
+<% end %>
+
+<%= render :partial => "shared/tweets", :object => @tweets %>

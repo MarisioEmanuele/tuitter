@@ -1,0 +1,83 @@
+/* Basic declarations */
+
+body { background-color: #fff; color: #333; }
+
+body, p, ol, ul, td {
+  font-family: "Helvetica Neue", Arial, sans-serif;;
+  font-size:   12px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a { color: #000; }
+a:visited { color: #666; }
+a:hover { color: #fff; background-color:#000; }    
+
+/* layout */
+
+h1 a {
+	text-decoration: none;
+}
+
+div#page {
+	width: 640px;
+	margin: auto;
+}
+
+.flash {
+  font-style: italic;
+  background: yellow;
+}
+
+
+/* forms */
+
+label > span {
+  display: inline-block;
+  width: 5em;
+}    
+
+/* Tweets */
+
+#new_tweet {
+	float: left;
+}
+
+.tweets {
+	width: 350px;
+	float: left;
+}
+
+.tweets li {
+	margin: 0;
+	list-style: none;
+	border-bottom: 1px solid gray;
+	border-left: 1px solid gray;
+	border-right: 1px solid gray;
+	padding: 6px;
+}
+
+.tweets li:first-child {
+	border-top: 1px solid gray;
+}
+
+.tweet > .header > a {
+	text-decoration: none;
+	color: gray;
+}
+
+.tweet > .header > a:hover {
+	text-decoration: underline;	
+	color: gray;
+	background-color: white;
+}
+
+.tweet .when {
+	float: right;
+	color: gray;
+}

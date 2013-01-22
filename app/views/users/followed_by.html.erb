@@ -1,0 +1,7 @@
+<h2>Utenti seguiti da <%= @user %></h2>
+
+<ul>
+  <% for user in @user.users_that_i_follow %>
+  <li><%= link_to_user user %></li>
+  <% end %>
+</ul>

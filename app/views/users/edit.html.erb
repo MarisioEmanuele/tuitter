@@ -1,0 +1,9 @@
+<h2>Aggiorna il tuo profilo</h2>
+
+<form action="/users/update" method="post">
+  <input type="hidden" name="id" value="<%= @user.id %>"/>
+  <%= render "form" %>
+  <p>
+    <input type="submit" value="Modifica" />
+  </p>  
+</form>

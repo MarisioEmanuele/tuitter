@@ -1,0 +1,9 @@
+<p>Abbiamo <%= @users.size %> utenti</p>
+
+<p><%= link_to "Iscriviti!", :action => "new" %></p>
+
+<ul>
+  <% for user in @users %>
+  <li><%= link_to user, :action => "show", :id => user.id %></li>
+  <% end %>
+</ul>
