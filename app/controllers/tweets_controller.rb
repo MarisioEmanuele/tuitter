@@ -10,11 +10,14 @@ class TweetsController < ApplicationController
   end
   
   def create 
-    category = Category.where(["name = (?)", params[:category_id]]).first   
+    category = Category.where(["name = (?)", params[:tweet][:category_id]]).first   
     if category.nil?  
-      category = Category.create(:name => params[:category_id])
+      category = Category.create(:name => params[:tweet][:category_id])
     end
-    @tweet = current_user.tweets.build(params[:tweet], :category_id => category.id)
+    @tweet = current_user.tweets.build(
+      :text => params[:tweet][:text],
+      :user_id => params[:tweet][:user_id],
+      :category_id => category.id)
     if @tweet.save
       flash[:notice] = "New tweet!"
     else
